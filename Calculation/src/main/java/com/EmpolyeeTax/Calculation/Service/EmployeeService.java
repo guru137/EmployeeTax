@@ -62,7 +62,7 @@ public class EmployeeService {
         double totalSalary = salaryPerMonth * totalMonths;
 
 
-        if (totalDaysInLastMonth > 1) {
+        if (totalDaysInLastMonth > 1&&!dojAfterFinancialYearStart.isEqual(financialYearStart)) {
             totalSalary += salaryPerMonth * (totalDaysInLastMonth /lengthOfMonth );
         }
 
